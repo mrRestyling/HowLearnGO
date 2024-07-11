@@ -1,2 +1,2 @@
 # HowLearnGO
-I learned to walk early. You can learn how to code in Go in this repository :) 
+I learned to go early. You can learn how to code in Go in this repository :) 
