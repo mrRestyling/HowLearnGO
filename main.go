@@ -169,15 +169,22 @@ func forRange() {
 		close(bfc)
 	}()
 
+	// когда мы используем for-range при чтении значения из канала
+	// нам не нужно проверять закрыт канал или нет
 	for v := range bfc {
 		fmt.Println("buffered", v)
 	}
 
-	unbfc := make(chan int)
+	// условие обмена остается read = write
+	unbfr := make(chan int)
 	go func() {
 		for _, num := range numbers {
-			unbfc <- num
+			unbfr <- num
 		}
+		close(unbfr)
 	}()
-	close(unbfc)
+
+	for value := range unbfr {
+		fmt.Println("unbfr", value)
+	}
 }
