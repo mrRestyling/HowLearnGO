@@ -16,9 +16,9 @@ import (
 // }
 
 func main() {
-	// nilChanel()
-	// unbufferedChannel()
-	// bufferedChannel()
+	nilChanel()
+	unbufferedChannel()
+	bufferedChannel()
 	forRange()
 }
 
@@ -35,8 +35,8 @@ func nilChanel() {
 	// запись в nil канал (чтение будет заблокировано навечно)
 	// <-nilChanel
 
-	// закрытие нил канала (паника)
-	close(nilChanel)
+	// // закрытие нил канала (паника)
+	// close(nilChanel)
 }
 
 func unbufferedChannel() {
@@ -108,6 +108,7 @@ func unbufferedChannel() {
 }
 
 func bufferedChannel() {
+
 	// представление:
 	// bufferedChannel {
 	// len(buffer) > 0; [1,2] <- сюда
