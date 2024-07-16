@@ -7,7 +7,7 @@ import (
 
 func main() {
 	var num1 int = 1
-	var num2 int8 = 12
+	var num2 int8 = 1
 	var num3 int16 = 1
 	var num4 int32 = 1
 	var num5 int64 = 1
