@@ -30,10 +30,10 @@ func baseSelect() {
 
 	case str := <-brd: // достать запись из канала (2)
 		fmt.Println("- Read:", str)
-		fmt.Println("")
+		fmt.Println()
 	case brd <- "second": // записать в канал новое значение (1)
 		fmt.Println("- Write:", <-brd, <-brd)
-		fmt.Println("")
+		fmt.Println()
 	}
 
 	unbrd := make(chan int)
@@ -54,7 +54,7 @@ func baseSelect() {
 		// 	fmt.Println("- Default case")
 	}
 
-	fmt.Println("")
+	fmt.Println()
 
 	resultChan := make(chan int)
 	timer := time.After(time.Second)
