@@ -9,13 +9,8 @@ import (
 )
 
 func main() {
-	// baseSelect()
+	baseSelect()
 	gracefulShutdown()
-	// chanAsPromise()
-	// workerPool()
-	// errGroup()
-	// chanAsMutex()
-	// secondWg()
 }
 
 func baseSelect() {
