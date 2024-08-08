@@ -13,8 +13,8 @@ import (
 // 2) Сообщать о завершении
 
 func main() {
-	// baseKnowledge()
-	workerPool()
+	baseKnowledge()
+	// workerPool()
 }
 
 func baseKnowledge() {
@@ -31,7 +31,7 @@ func baseKnowledge() {
 	withCancel, cancel := context.WithCancel(ctx) // контекст создается на основе родительского
 	fmt.Println(withCancel.Err())                 // метод контекста
 	cancel()                                      // вызываем колбэк, который завершает наш контекст вручную
-	// в момент когда наш контекст завершается - у него кладется ошибка о завершении контекста
+	// в момент когда наш контекст завершается - в него кладется ошибка о завершении контекста
 	fmt.Println(withCancel.Err())
 	// ! контекст нужно закрывать на том же уровне !
 	fmt.Println()

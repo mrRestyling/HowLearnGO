@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	baseSelect()
+	// baseSelect()
 	gracefulShutdown()
 }
 
